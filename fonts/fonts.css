@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'taroko';
+  src: url('./taroko/taroko-webfont.eot');
+  src: url('./taroko/taroko-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./taroko/taroko-webfont.woff2') format('woff2'),
+       url('./taroko/taroko-webfont.woff') format('woff'),
+       url('./taroko/taroko-webfont.ttf') format('truetype'),
+       url('./taroko/taroko-webfont.svg#tarokofontregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
