@@ -9,3 +9,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
+.ja .bold {
+	font-family: 'HiraMinProN-W6', Roboto, 'Meiryo UI', 'Meiryo', sans-serif;
+	font-weight: 700;
+}
+
+.ja {
+	font-family: 'HiraKakuProN-W3', 'Hiragino Kaku Gothic ProN', Roboto, 'Meiryo UI', 'Meiryo', sans-serif;
+	font-weight: 400;
+}
