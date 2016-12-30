@@ -1,9 +1,18 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	background-color: #ccc;
+}
+
 .ja .bold {
-	font-family: 'HiraMinProN-W6', Roboto, 'Meiryo UI', 'Meiryo', sans-serif;
+	font-family: 'HiraMinProN-W6', Roboto, 'Meiryo UI', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .ja {
-	font-family: 'HiraKakuProN-W3', 'Hiragino Kaku Gothic ProN', Roboto, 'Meiryo UI', 'Meiryo', sans-serif;
+	font-family: 'Apple TP', 'ヒラギノ角ゴ Pro W3', 'HiraKakuProN-W3', 'Hiragino Kaku Gothic Pro', 'Hiragino Kaku Gothic ProN', Roboto, 'Meiryo UI', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .bold {
@@ -11,5 +20,110 @@
 }
 
 .en {
-	font-family: Roboto, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+	font-family: Roboto, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#container {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+#content {
+	padding: 5%;
+	position: relative;
+	width: 100%;
+	height: 90%;
+	box-sizing: border-box;
+}
+
+#content-viewport {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#content.to {
+	margin-top: 15%;
+}
+
+.ja, .en {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+h1, p {
+	position: relative;
+	margin: 0;
+}
+
+.year {
+	display: block;
+	font-size: 2rem;
+	font-weight: 400;
+	position: absolute;
+}
+
+.ja h1 {
+	position: absolute;
+	right: 0;
+	writing-mode: vertical-rl;
+	font-size: 5rem;
+}
+
+.ja .year {
+	left: -35%;
+	bottom: 5%;
+}
+
+.ja .year span {
+	writing-mode: initial;
+}
+
+.ja .words {
+	position: absolute;
+	font-size: 3rem;
+	left: 0;
+	right: 25%;
+	margin-top: 10%;
+}
+
+.words p {
+	margin-bottom: 2rem;
+}
+
+.words p span {
+	display: block;
+	text-align: right;
+}
+
+.en {
+	position: absolute;
+	left: 0;
+	right: 35%;
+	bottom: 0;
+	top: 50%;
+}
+
+.en h1 {
+	text-align: center;
+	margin-bottom: 5rem;
+}
+
+.en h1 .year {
+	position: absolute;
+	top: 85%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	text-indent: 43%;
+}
+
+.en p {
+	text-align: center;
 }

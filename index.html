@@ -2,8 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="canonical" href="https://github.josephting.my/2017/" />
-    <link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="canonical" href="https://github.josephting.my/2017/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css" charset="utf-8">
     <script type="text/javascript">
         if ((window.location.host == 'github.josephting.my') && (window.location.protocol != 'https:')) {
           window.location.protocol = 'https';
@@ -11,18 +13,26 @@
     </script>
 </head>
 <body>
-    <div class="ja">
-        <h1 class="bold">明けましておめでとうございます<span class="year">平成29年</span></h1>
-        <p>
-            昨年はいろいろとお世話になり心より感謝いたします<br>
-            今年もよろしくお願いいたします
-        </p>
+    <div id="container">
+        <div id="content" class="to">
+            <div id="content-viewport">
+                <div class="ja">
+                    <h1 class="bold">明けまして<br>&emsp;&emsp;おめでとうございます<span class="year">平成<span>29</span>年</span></h1>
+                    <div class="words">
+                        <p>昨年はいろいろとお世話になり<span>心より感謝いたします</span></p>
+                        <p>今年もよろしくお願いいたします</p>
+                    </div>
+                </div>
+                <div class="en">
+                    <h1 class="bold">Happy New Year<span class="year">2017</span></h1>
+                    <p>
+                        May the dawn of this new year bring health, happiness and prosperity to you along with your family and friends.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="en">
-        <h1 class="bold">Happy New Year<span class="year">2017</span></h1>
-        <p>
-            May the dawn of this new year bring health, happiness and prosperity to you along with your family and friends.
-        </p>
-    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 </html>
