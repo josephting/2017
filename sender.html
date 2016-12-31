@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Greeting Card Link Generator</title>
+    <style>
+    input[type=text] {
+        font-size: 32px;
+        padding: 5px 15px;
+        width: 100%;
+    }
+    #link {
+        width: 100%;
+        height: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div style="max-width:800px;margin:0 auto;">
+        <form>
+            <p><input id="name_ja" placeholder="名前" type="text"></p>
+            <p><input id="name" placeholder="Name" type="text"></p>
+        </form>
+        <textarea id="link" readonly></textarea>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+(function ($, window, document) {
+    $('form').on('change', function () {
+        var name = {
+            "name": $('#name').val()
+        };
+
+        var name_ja = $('#name_ja').val();
+        if (name_ja !== '') {
+            name.name_ja = encodeURIComponent(name_ja);
+        }
+
+        $('#link').text('https://github.josephting.my/2017/?n=' + btoa(JSON.stringify(name)));
+    });
+})(window.jQuery, window, document);
+    </script>
+</body>
+</html>
