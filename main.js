@@ -8,6 +8,7 @@
   };
 
   var initialization = function () {
+    console.log(Modernizr.testAllProps('writingMode'));
     if (!Modernizr.testAllProps('writingMode')) {
       $('html').addClass('noWritingMode');
     }

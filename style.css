@@ -88,6 +88,7 @@ h1, p {
 .ja h1 {
 	position: absolute;
 	right: 0;
+	-webkit-writing-mode: vertical-rl;
 	writing-mode: vertical-rl;
 	font-size: 5rem;
 }
@@ -98,6 +99,7 @@ h1, p {
 }
 
 .ja .year span {
+	-webkit-writing-mode: initial;
 	writing-mode: initial;
 }
 
@@ -145,6 +147,7 @@ h1, p {
 }
 
 .noWritingMode .ja h1 {
+	-webkit-writing-mode: initial;
 	writing-mode: initial;
 	font-size: 2.5rem;
 	text-align: center;
@@ -244,8 +247,105 @@ h1, p {
 }
 
 @media only screen and (max-height: 560px) {
-	.noWritingMode .en {
+	.noWritingMode .en,
+	.noWritingMode .ja .words {
 		margin-top: 1rem;
+	}
+
+	.noWritingMode .en h1 {
+		margin-bottom: 1rem;
+	}
+
+	.ja h1 {
+		-webkit-writing-mode: initial;
+		writing-mode: initial;
+		font-size: 2.5rem;
+		text-align: center;
+		position: relative;
+		right: auto;
+	}
+
+	.ja h1 .whitespace {
+		display: none;
+	}
+
+	.ja .year {
+		left: auto;
+		bottom: auto;
+		position: relative;
+	}
+
+	.ja .words {
+		position: relative;
+		left: auto;
+		right: auto;
+		margin-top: 1rem;
+	}
+
+	.words p {
+		margin-bottom: 1rem;
+	}
+
+	.ja, .en {
+		position: relative;
+		left: auto;
+		right: auto;
+		bottom: auto;
+		top: auto;
+	}
+
+	.en h1 .year {
+		position: relative;
+		top: auto;
+		left: auto;
+		right: auto;
+		text-indent: 0;
+	}
+
+	.en h1 {
+		margin-bottom: 1rem;
+	}
+
+	.ja {
+		margin-bottom: 2rem;
+	}
+}
+
+@media only screen and (max-height: 520px) {
+	#content.to {
+		margin-top: 0;
+	}
+
+	#recipient {
+		position: relative;
+		top: auto;
+		margin-top: 0;
+		padding-top: 0;
+	}
+}
+
+@media only screen and (max-height: 480px) {
+	.noWritingMode .ja {
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-height: 448px) {
+	#content.to {
+		margin-top: 0;
+	}
+
+	.from {
+		position: relative;
+		margin-top: 1rem;
+	}
+
+	#content-viewport {
+		height: auto;
+	}
+
+	#content-viewport, #container {
+		overflow: auto;
 	}
 }
 
