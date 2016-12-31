@@ -88,6 +88,7 @@ h1, p {
 	font-size: 2rem;
 	font-weight: 400;
 	position: absolute;
+	white-space: nowrap;
 }
 
 .ja h1 {
