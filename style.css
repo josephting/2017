@@ -36,6 +36,7 @@ body {
 
 #overlay.dismissed {
 	background-color: transparent;
+	pointer-events: none;
 }
 
 #container {
@@ -50,8 +51,12 @@ body {
 	padding: 5%;
 	position: relative;
 	width: 100%;
-	height: 90%;
+	height: 100%;
 	box-sizing: border-box;
+}
+
+#content.to {
+	height: 90%;
 }
 
 #content-viewport {
@@ -88,6 +93,7 @@ h1, p {
 .ja h1 {
 	position: absolute;
 	right: 0;
+	-ms-writing-mode: vertical-rl;
 	-webkit-writing-mode: vertical-rl;
 	writing-mode: vertical-rl;
 	font-size: 5rem;
@@ -255,6 +261,64 @@ h1, p {
 	.noWritingMode .en h1 {
 		margin-bottom: 1rem;
 	}
+}
+
+@media only screen and (max-height: 520px) {
+	#content.to {
+		margin-top: 0;
+	}
+
+	#recipient {
+		position: relative;
+		top: auto;
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.ja h1 {
+		font-size: 2.5rem;
+	}
+
+	.en {
+		top: 40%;
+	}
+
+	.en h1 {
+		margin-bottom: 2rem;
+	}
+
+	.words p span {
+		display: inline;
+	}
+
+	.words p {
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (max-height: 480px) {
+	.noWritingMode .ja {
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-height: 440px) {
+	#content.to {
+		margin-top: 0;
+	}
+
+	.from {
+		position: relative;
+		margin-top: 1rem;
+	}
+
+	#content-viewport, #content {
+		height: auto;
+	}
+
+	#container {
+		overflow: auto;
+	}
 
 	.ja h1 {
 		-webkit-writing-mode: initial;
@@ -308,44 +372,6 @@ h1, p {
 
 	.ja {
 		margin-bottom: 2rem;
-	}
-}
-
-@media only screen and (max-height: 520px) {
-	#content.to {
-		margin-top: 0;
-	}
-
-	#recipient {
-		position: relative;
-		top: auto;
-		margin-top: 0;
-		padding-top: 0;
-	}
-}
-
-@media only screen and (max-height: 480px) {
-	.noWritingMode .ja {
-		margin-top: 0;
-	}
-}
-
-@media only screen and (max-height: 448px) {
-	#content.to {
-		margin-top: 0;
-	}
-
-	.from {
-		position: relative;
-		margin-top: 1rem;
-	}
-
-	#content-viewport {
-		height: auto;
-	}
-
-	#content-viewport, #container {
-		overflow: auto;
 	}
 }
 
